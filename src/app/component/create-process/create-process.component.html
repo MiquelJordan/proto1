@@ -1,0 +1,11 @@
+<form [formGroup]="processForm" (ngSubmit)="onSave()">
+  <input formControlName='processId'>
+  <div formGroupName='step'>
+    <input formControlName="photo">
+    <input formControlName="text">
+    <input formControlName="background">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<p>Value: {{ processForm.value | json }}</p>
+<p></p>
